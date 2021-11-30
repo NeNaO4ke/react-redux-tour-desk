@@ -1,0 +1,73 @@
+.excursionCard {
+    width: 100%;
+    height: 236px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    opacity: .95;
+}
+
+.sliderPic {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    /*opacity: .95;*/
+}
+
+.excursionInfo {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.centerCarCap.carousel-caption {
+    height: auto;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,.5);
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.image_preview_container {
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.6) 10%, transparent 100%);
+
+}
+.image_preview {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+}
+
+.mainRow {
+    min-height: calc(100vh - 177px);
+}
+

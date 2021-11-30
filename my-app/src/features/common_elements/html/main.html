@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link href="sidebars.css" rel="stylesheet">
+    <link href="cards.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="sticky-top">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-white" aria-label="Eleventh navbar example">
+        <div class="container">
+            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"/>
+                </svg>
+                <span class="navbar-brand ms-2">M.I.L.F</span>
+                <div class="vr d-none d-xl-block"></div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
+                    aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarsExample09">
+                <ul class="navbar-nav mb-2 mb-lg-0  align-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Excursions</a>
+                    </li>
+                    <div class="vr d-none d-lg-block"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <div class="vr d-none d-lg-block"></div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown"
+                           aria-expanded="false">About</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                            <li><a class="dropdown-item" href="#">Info</a></li>
+                            <li><a class="dropdown-item" href="#">Contacts</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0  align-content-center">
+                    <li>
+                        <form class="col-12 col-sm-auto me-0 me-lg-2">
+                            <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                                   aria-label="Search">
+                        </form>
+                    </li>
+                    <!--                <li class="nav-item h5  mx-2 ">-->
+                    <!--                    <div class="nav-link">Name Surname</div>-->
+                    <!--                </li>-->
+                    <li>
+                        <button type="button" class="btn btn-outline-light col-12 col-lg-auto mt-2 mt-lg-0 me-2">Login
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="h3 mb-3 btn rounded-0 btn-info sticky-top container-fluid d-block d-md-none" type="button"
+         data-bs-toggle="offcanvas"
+         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Sort parameters
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-start" style="width: 322px" tabindex="-1" id="offcanvasExample"
+     aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+        <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#home-collapse1" aria-expanded="true">
+                    Price
+                </button>
+                <div class="collapse" id="home-collapse1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li>Price range slider</li>
+                        <li><label for="customRange3" class="form-label">Example range</label>
+                            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"></li>
+                        <li><a href="#" class="link-dark rounded">Reports</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dashboard-collapse1" aria-expanded="false">
+                    Excursion method
+                </button>
+                <div class="collapse" id="dashboard-collapse1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Overview</a></li>
+                        <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                        <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                        <li><a href="#" class="link-dark rounded">Annually</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#orders-collapse1" aria-expanded="false">
+                    Time
+                </button>
+                <div class="collapse" id="orders-collapse1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">New</a></li>
+                        <li><a href="#" class="link-dark rounded">Processed</a></li>
+                        <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                        <li><a href="#" class="link-dark rounded">Returned</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="border-top my-3"></li>
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#account-collapse1" aria-expanded="false">
+                    What you want to see?
+                </button>
+                <div class="collapse" id="account-collapse1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">New...</a></li>
+                        <li><a href="#" class="link-dark rounded">Profile</a></li>
+                        <li><a href="#" class="link-dark rounded">Settings</a></li>
+                        <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        </form>
+    </div>
+</div>
+
+<div class="row gx-0 mt-4 mainRow">
+    <div class="col-md-auto d-none d-md-block">
+        <div class="flex-shrink-0 p-3 ps-4 bg-white position-sticky" style="top: 64px">
+            <a class="navbar-brand me-5" href="#">Sorting sidebar</a>
+            <ul class="list-unstyled ps-0 collapse show" id="sideBar">
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#home-collapse" aria-expanded="true">
+                        Price
+                    </button>
+                    <div class="collapse" id="home-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Overview</a></li>
+                            <li><a href="#" class="link-dark rounded">Updates</a></li>
+                            <li><a href="#" class="link-dark rounded">Reports</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        Excursion method
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Overview</a></li>
+                            <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                            <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                            <li><a href="#" class="link-dark rounded">Annually</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#orders-collapse" aria-expanded="false">
+                        Time
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">New</a></li>
+                            <li><a href="#" class="link-dark rounded">Processed</a></li>
+                            <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                            <li><a href="#" class="link-dark rounded">Returned</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#account-collapse" aria-expanded="false">
+                        What you want to see?
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">New...</a></li>
+                            <li><a href="#" class="link-dark rounded">Profile</a></li>
+                            <li><a href="#" class="link-dark rounded">Settings</a></li>
+                            <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col container px-4  ">
+        <div class="row gx-3 gy-3">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="excursionCard card-body"
+                     style="background-image: url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')">
+                    <p class="excursionInfo">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" fill="white" clip-rule="evenodd"
+              d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+</svg>
+
+<div class="bg-dark">
+    <div class="container sticky-bot">
+        <footer class="d-flex mb-0 bg-dark flex-wrap justify-content-evenly align-items-center py-3 my-4 border-top border-dark">
+            <p class="col-md-4 pe-2 mb-0 text-muted">&copy; 2021 Company, Inc</p>
+            <a href="#"
+               class="col-md-4 d-flex align-items-center justify-content-center mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"/>
+                </svg>
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+
+
+</body>
+</html>
