@@ -9,13 +9,8 @@ import {BrowserRouter} from "react-router-dom";
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore' // <- needed if using firestore
-import {
-    ReactReduxFirebaseProvider,
-    firebaseReducer
-} from 'react-redux-firebase'
-import {createFirestoreInstance, firestoreReducer} from 'redux-firestore'
-import {configureStore} from "@reduxjs/toolkit";
-import counterReducer from "./features/counter/counterSlice";
+import {ReactReduxFirebaseProvider} from 'react-redux-firebase'
+import {createFirestoreInstance} from 'redux-firestore'
 
 const firebaseConfig = {
 

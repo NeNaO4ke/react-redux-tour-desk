@@ -1,18 +1,50 @@
 import Excursion from "./excursion";
 import {useFirestoreConnect} from "react-redux-firebase";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchExcursions, selectExcursions} from "./excursionSlice";
+import {useEffect} from "react";
+import {Spinner} from "../Spinner";
+import ExcursionCard from "./excursionCard";
+
 
 export default function ExcursionLayout(props) {
-    useFirestoreConnect([
-        {collection: 'excursions'}
-    ])
-    const excursions = useSelector((state) => state.firestore.ordered.excursions)
+    const dispatch = useDispatch();
+  //  dispatch(fetchExcursions())
+    let excursions = useSelector(selectExcursions)
+    // useFirestoreConnect([
+    //     {collection: 'excursions'}
+    // ])
+    // const excursions = useSelector((state) => state.firestore.ordered.excursions)
+    let status = useSelector(state => state.excursion.status)
+    const error = useSelector((state) => state.excursion.error)
 
-    const listItems = (excursions && excursions.map(exc =>
+    useEffect(() => {
+        if (status === 'idle') {
+            dispatch(fetchExcursions())
+        }
+    }, [status, dispatch])
+
+    let content
+
+    if (status === 'loading') {
+        content = <Spinner text="Loading..." />
+    } else if (status === 'succeeded') {
+
+        content = (excursions.map(exc =>
+            <ExcursionCard key={exc.id} name={exc.name} maxLoad={exc.maxLoad} city={exc.city}
+                       country={exc.country} cost={exc.cost} currency={exc.currency}
+                       currentLoad={exc.currentLoad}
+                       image={exc.images[0]}/>))
+
+    } else if (status === 'failed') {
+        content = <div>{error}</div>
+    }
+
+/*    const listItems = (excursions && excursions.map(exc =>
         <Excursion key={exc.id} name={exc.name} maxLoad={exc.maxLoad} city={exc.city}
                    country={exc.country} cost={exc.cost} currency={exc.currency}
                    currentLoad={exc.currentLoad}
-                   image={exc.images[0]}/>))
+                   image={exc.images[0]}/>))*/
 
     return (
         <div>
@@ -22,7 +54,7 @@ export default function ExcursionLayout(props) {
                 <SideBar/>
                 <div className="col container px-4  ">
                     <div className="row gx-3 gy-3">
-                        {listItems}
+                        {content}
                     </div>
                 </div>
             </div>

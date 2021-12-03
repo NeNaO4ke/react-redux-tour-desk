@@ -1,6 +1,5 @@
 import React from 'react';
 import {Counter} from './features/counter/Counter';
-import {Footer, Navbar} from './features/common_elements/commons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css';
@@ -9,9 +8,10 @@ import InfoPage from "./features/about/about";
 import Gallery from "./features/gallery/gallery";
 import {useFirestoreConnect} from "react-redux-firebase";
 import {useSelector} from "react-redux";
-import MainLayout from "./features/xcursions/mainLayout";
 import ExcursionLayout from "./features/xcursions/mainLayout";
 import Layout from "./Layout";
+import ExcursionCard from "./features/xcursions/excursionCard";
+import Excursion from "./features/xcursions/excursion";
 
 function Void() {
     useFirestoreConnect([
@@ -42,16 +42,17 @@ const srcS = ['https://images.unsplash.com/photo-1583611352296-1e7f6d767659?ixli
 
 function App() {
 
-
     return (
-            <Routes>
-                <Route path='/' element={<Layout/>}>
-                    <Route path='/counter' element={<Counter/>}/>
-                    <Route path='/gallery' element={<Gallery arr={srcS}/>}/>
-                    <Route path='/about' element={<InfoPage/>}/>
-                    <Route index element={<ExcursionLayout/>}/>
-                </Route>
-            </Routes>
+        <Routes>
+            <Route path='/' element={<Layout/>}>
+                <Route path='/counter' element={<Counter/>}/>
+                <Route path='/gallery' element={<Gallery arr={srcS}/>}/>
+                <Route path='/about' element={<InfoPage/>}/>
+                <Route path='/excursions' element={<ExcursionLayout/>} />
+                <Route path='/excursions/:excursionId' element={<Excursion />}/>
+                <Route index element={<ExcursionLayout/>}/>
+            </Route>
+        </Routes>
     )
 }
 
