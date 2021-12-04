@@ -13,6 +13,7 @@ import Layout from "./Layout";
 import ExcursionCard from "./features/xcursions/excursionCard";
 import Excursion from "./features/xcursions/excursion";
 
+
 function Void() {
     useFirestoreConnect([
         {collection: 'excursions'} // or 'todos'

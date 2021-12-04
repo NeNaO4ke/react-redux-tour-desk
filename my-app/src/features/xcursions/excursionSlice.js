@@ -7,13 +7,19 @@ const initialState = {
     excursions: []
 }
 export const fetchExcursions = createAsyncThunk('excursion/fetchExcursions', async () => {
-    // const response = await client.get('http://localhost:8080/excursions')
-    // return response.data
     const response = await client.get('http://localhost:8080/excursions')
     const data = await response.data.content
     console.log(data)
     return data
 })
+
+export const fetchOneExcursion = createAsyncThunk('excursion/fetchExcursions', async (id) => {
+    const response = await client.get(`http://localhost:8080/excursions/${id}`)
+    const data = await response.data.content
+    console.log(data)
+    return data
+})
+
 export const excursionSlice = createSlice({
     name: 'excursion',
     initialState,
@@ -30,7 +36,7 @@ export const excursionSlice = createSlice({
             }
         }
     },
-    extraReducers:(builder) => {
+    extraReducers: (builder) => {
         builder
             .addCase(fetchExcursions.pending, (state, action) => {
                 state.status = 'loading'
@@ -44,11 +50,24 @@ export const excursionSlice = createSlice({
                 state.status = 'failed'
                 state.error = action.error.message
             })
+            .addCase(fetchOneExcursion.pending, (state, action) => {
+                state.status = 'loading'
+            })
+            .addCase(fetchOneExcursion.fulfilled, (state, action) => {
+                state.status = 'succeeded'
+                // Add any fetched posts to the array
+                state.excursions = state.excursions.concat(action.payload)
+            })
+            .addCase(fetchOneExcursion.rejected, (state, action) => {
+                state.status = 'failed'
+                state.error = action.error.message
+            })
     }
 })
 
 export const {excursionsLoading, excursionsReceived} = excursionSlice.actions
 
 export const selectExcursions = (state) => state.excursion.excursions;
+export const selectExcursionById = (state, id) => state.excursion.excursions.find(ex => ex.id === id);
 
 export default excursionSlice.reducer
