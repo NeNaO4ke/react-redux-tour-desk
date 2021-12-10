@@ -18,3 +18,10 @@
         height: 800px;
     }
 }
+
+
+.customDatePickerWidth > div{
+    width: unset;
+    margin-right: auto;
+    margin-left: auto;
+}

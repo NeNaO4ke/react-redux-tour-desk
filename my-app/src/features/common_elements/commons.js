@@ -1,6 +1,6 @@
 import './html/cards.css'
 import './html/sidebars.css'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {login, logout, selectLoginStatus} from "../auth";
 import {useState} from "react";
@@ -28,20 +28,26 @@ export function Navbar() {
                 <div class="collapse navbar-collapse justify-content-between" id="navbarsExample09">
                     <ul class="navbar-nav mb-2 mb-lg-0  align-content-center">
                         <li class="nav-item">
-                            <Link class="nav-link active" aria-current="page" to='/excursions'>Excursions</Link>
+                            <NavLink  className={({ isActive }) =>
+                                isActive ? 'nav-link active' : 'nav-link'
+                            } aria-current="page" to='/excursions'>Excursions</NavLink>
                         </li>
                         <div class="vr d-none d-lg-block"></div>
                         <li class="nav-item">
-                            <Link class="nav-link" to='/gallery'>&#9794;Gallery&#9794;</Link>
+                            <NavLink className={({ isActive }) =>
+                                isActive ? 'nav-link active' : 'nav-link'
+                            }  to='/gallery'>Gallery</NavLink>
                         </li>
                         <div class="vr d-none d-lg-block"></div>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown"
                                aria-expanded="false">About</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown09">
-                                <li><Link class="dropdown-item" to='/about'>Info</Link></li>
-                                <li><a class="dropdown-item" href="#">Contacts</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><NavLink className={({ isActive }) =>
+                                    isActive ? 'active dropdown-item' : 'dropdown-item'
+                                } to='/about'>Info</NavLink></li>
+                                <li><a className="dropdown-item" href="#">Contacts</a></li>
+                                <li><a className="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
 

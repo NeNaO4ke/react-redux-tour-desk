@@ -1,9 +1,9 @@
-export const Spinner = ({ text = '', size = '5em' }) => {
-    const header = text ? <h4>{text}</h4> : null
+export const Spinner = () => {
     return (
-        <div className="spinner">
-            {header}
-            <div className="loader" style={{ height: size, width: size }} />
+        <div className="w-100 d-flex justify-content-center">
+            <div className="spinner-border" style={{height: '200px', width: '200px'}} role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
         </div>
     )
 }

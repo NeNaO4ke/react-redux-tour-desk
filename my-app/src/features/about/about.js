@@ -14,7 +14,7 @@ export default function InfoPage() {
             <div className="carousel-inner container-sm-fluid">
                 <div className="carousel-item active">
                     <div className="sliderPic d-block"
-                         style={{ backgroundImage: "url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')" }}>
+                         style={{ backgroundImage: "url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bojnice-castle-1603142898.jpg')" }}>
                     </div>
                     <div className="carousel-caption centerCarCap align-middle ">
                         <h5>What is Lorem Ipsum?</h5>
@@ -27,7 +27,7 @@ export default function InfoPage() {
                 </div>
                 <div className="carousel-item">
                     <div className="sliderPic d-block"
-                         style={{ backgroundImage: "url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')" }}>
+                         style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/4/40/Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg')" }}>
 
                     </div>
                     <div className="carousel-caption centerCarCap align-middle ">
@@ -47,7 +47,7 @@ export default function InfoPage() {
                 </div>
                 <div className="carousel-item">
                     <div className="sliderPic d-block"
-                         style={{ backgroundImage: "url('https://a-static.besthdwallpaper.com/boruto-naruto-sleduyushchee-pokolenie-naruto-uzumaki-baryon-mode-4k-oboi-3840x2160-80686_54.jpg')" }}>
+                         style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Kilimanjaro_from_Amboseli.jpg')" }}>
 
                     </div>
                     <div className="carousel-caption centerCarCap align-middle">
